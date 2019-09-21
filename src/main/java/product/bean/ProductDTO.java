@@ -56,7 +56,7 @@ public class ProductDTO{
         long diffDays = diff / (24 * 60 * 60 * 1000);
         long diffNewDays = diffNew/(24 * 60 * 60 * 1000);
         
-        DecimalFormat nf = new DecimalFormat("###");
+        DecimalFormat nf = new DecimalFormat("#,###");
 			productListHTML = new StringBuffer();
 			productListHTML.append("<div class='col-lg-4 col-md-6 mb-4'><div class='card h-100'>");		
 			productListHTML.append("<a href='/minishop/product/productView.do?product_name_no="+product_name_no+"'>");	
