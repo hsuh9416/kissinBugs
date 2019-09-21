@@ -13,4 +13,4 @@ Repository minishop에서 Ubuntu 배포용으로 수정된 프로젝트 소스�
  
  #참고
  
- <a href="https://drive.google.com/open?id=1bVtb1gcBwpEog5nc6S6RN-KChqqy4BDr">이 프로젝트의 포트폴리오 보기(PDF)</>
+ <a href="https://drive.google.com/open?id=1bVtb1gcBwpEog5nc6S6RN-KChqqy4BDr">이 프로젝트의 포트폴리오 보기(PDF)</a>
