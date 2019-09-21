@@ -29,8 +29,8 @@ public class StorageController {
 		String ext;
 		String[] exts;
 		
-		String imgpath = request.getContextPath() + "/storage/onstore/noImage.jpg";		
-		String uploadPath = request.getContextPath() +"/storage/onstore/";
+		String imgpath = request.getSession().getServletContext().getRealPath("/") + "storage/onstore/noImage.jpg";		
+		String uploadPath = request.getSession().getServletContext().getRealPath("/") + "storage/onstore/";
 
 		ServletOutputStream bout =null;
 		FileInputStream fis =null;	
@@ -56,7 +56,7 @@ public class StorageController {
 			  	
 			  File fileImage = new File(uploadPath);
 			   if(fileImage.exists()){
-				    	imgpath = request.getContextPath() + "/storage/onstore/"+ product_name_image;}}  	   		 
+				    	imgpath = request.getSession().getServletContext().getRealPath("/") + "storage/onstore/"+ product_name_image;}}  	   		 
 		
 		 try {
 			 	bout = response.getOutputStream();
@@ -80,8 +80,8 @@ public class StorageController {
 		String ext;
 		String[] exts;
 		
-		String imgpath = request.getContextPath()+ "/storage/banner/no_banner.jpg";		
-		String uploadPath = request.getContextPath()+"/storage/banner/";
+		String imgpath = request.getSession().getServletContext().getRealPath("/") + "storage/banner/no_banner.jpg";		
+		String uploadPath = request.getSession().getServletContext().getRealPath("/") + "storage/banner/";
 
 		ServletOutputStream bout =null;
 		FileInputStream fis =null;	
@@ -107,7 +107,7 @@ public class StorageController {
 			  	
 			  File fileImage = new File(uploadPath);
 			   if(fileImage.exists()){
-				    	imgpath = request.getContextPath() + "/storage/banner/"+ event_image;}}  	   		 
+				    	imgpath = request.getSession().getServletContext().getRealPath("/") + "storage/banner/"+ event_image;}}  	   		 
 		
 		 try {
 			 	bout = response.getOutputStream();

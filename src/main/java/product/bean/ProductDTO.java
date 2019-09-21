@@ -1,6 +1,6 @@
 package product.bean;
 
-import java.text.NumberFormat;
+import java.text.DecimalFormat;
 import java.util.Date;
 
 import org.springframework.stereotype.Component;
@@ -56,16 +56,16 @@ public class ProductDTO{
         long diffDays = diff / (24 * 60 * 60 * 1000);
         long diffNewDays = diffNew/(24 * 60 * 60 * 1000);
         
-        NumberFormat nf = NumberFormat.getCurrencyInstance();
+        DecimalFormat nf = new DecimalFormat("###");
 			productListHTML = new StringBuffer();
 			productListHTML.append("<div class='col-lg-4 col-md-6 mb-4'><div class='card h-100'>");		
 			productListHTML.append("<a href='/minishop/product/productView.do?product_name_no="+product_name_no+"'>");	
 	        productListHTML.append("<img class='card-img-top' src='/minishop/storage/showProduct.do?product_name_image="+product_name_image+"' alt='' style='height:200px;'></a>");
 	        productListHTML.append("<div class='card-body'><h4 class='card-title'><a href='/minishop/product/productView.do?product_name_no="+product_name_no+"'>"+productName+"</a></h4>");
         if(unitcost<product_name_price) {
-        		productListHTML.append("<h5>"+nf.format(unitcost)+"&emsp;&emsp;<span style='color:red;font-size:10px;'><i class='fas fa-tag'>특가판매중</i></span></h5>");}
+        		productListHTML.append("<h5><i class='fas fa-won-sign'>"+nf.format(unitcost)+"</i>&emsp;&emsp;<span style='color:red;font-size:10px;'><i class='fas fa-tag'>특가판매중</i></span></h5>");}
         else {
-        		productListHTML.append("<h5>"+nf.format(unitcost)+"</h5>");}
+        		productListHTML.append("<h5><i class='fas fa-won-sign'>"+nf.format(unitcost)+"</i></h5>");}
 	        productListHTML.append("<p class='card-text'>"+product_name_title+"</p></div>");
 	        productListHTML.append("<div class='card-footer'><small class='text-muted'>");
 	        productListHTML.append("<i id='iconMinimum' class='fas fa-eye'><strong>"+product_hit+"</strong></i>");
